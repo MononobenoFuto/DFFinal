@@ -13,6 +13,6 @@ module dffinal(clk, p1, p2, kick, reset, led, show, seg, alert);
 	wire err;
 	wire [3:0] pos;
 	score xsy(clk, win1, win2, kick, reset, sc1, sc2, tsc1, tsc2, st, toIDLE);
-	game why(clk, p1, p2, reset, toIDLE, win1, win2, state, err, pos);
+	game why(clk, p1, p2, st, reset, toIDLE, win1, win2, state, err, pos);
 	show cr(clk, st, tsc1, tsc2, sc1, sc2, state, pos, er, led, show, seg, alert);
 endmodule
